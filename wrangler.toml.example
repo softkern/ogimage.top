@@ -4,8 +4,11 @@ compatibility_flags = ["nodejs_compat"]
 pages_build_output_dir = ".vercel/output/static"
 
 [vars]
-NEXT_PUBLIC_BASE_URL=https://ogimage.top
-NEXT_PUBLIC_API_URL=https://ogimage.top/api
+NEXT_PUBLIC_BASE_URL="https://ogimage.top"
+NEXT_PUBLIC_API_URL="https://ogimage.top/api"
 
 NEXT_PUBLIC_GOOGLE_ID=
 NEXT_PUBLIC_GOOGLE_ADSENSE_ID=
+
+NEXT_PUBLIC_UMAMI_URL=
+NEXT_PUBLIC_UMAMI_ID=
