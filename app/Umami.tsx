@@ -8,7 +8,7 @@ const Umami = () => {
       {process.env.NEXT_PUBLIC_UMAMI_URL && process.env.NEXT_PUBLIC_UMAMI_ID ? (
         <>
           <Script
-            async
+            defer
             src={process.env.NEXT_PUBLIC_UMAMI_URL}
             data-website-id={process.env.NEXT_PUBLIC_UMAMI_ID}
           />
