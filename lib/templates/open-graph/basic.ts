@@ -34,7 +34,7 @@ export const basicTemplateDefault: BasicTemplate = {
   name: "og:basic",
   params: {
     title: {
-      text: "ogImage.click",
+      text: "ogimage.top",
       fontFamily: "inter",
       fontWeight: 700,
       fontSize: 52,

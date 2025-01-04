@@ -1,10 +1,8 @@
 import Link from "next/link"
-import { GithubIcon } from "lucide-react"
-import { FaBluesky, FaXTwitter } from "react-icons/fa6"
+import { FaBluesky, FaGithub, FaXTwitter } from "react-icons/fa6"
 
-import { siteConfig } from "@/config/site"
-import { Button } from "@/components/ui/button"
 import { ModeToggle } from "@/components/mode-toggle"
+import { siteConfig } from "@/config/site"
 
 export default function Footer() {
   return (
@@ -20,17 +18,6 @@ export default function Footer() {
             >
               Free OG Image Generator
             </Link>
-
-            <Button variant="link" asChild>
-              <Link
-                href="/guides"
-                prefetch={false}
-                title="Guides"
-                aria-label="Guides"
-              >
-                Guides
-              </Link>
-            </Button>
           </div>
 
           <div className="flex flex-col items-start gap-2 sm:items-start">
@@ -45,25 +32,30 @@ export default function Footer() {
               >
                 <FaXTwitter className="h-5 w-5 text-black dark:text-white" />
               </Link>
+
+              {
+                siteConfig.authors[0].bluesky &&
+                <Link
+                  href={siteConfig.authors[0].bluesky || "/"}
+                  prefetch={false}
+                  target="_blank"
+                  title="Follow me on Bluesky"
+                  rel="noopener noreferrer nofollow"
+                  aria-label="Bluesky"
+                >
+                  <FaBluesky className="h-5 w-5 text-black dark:text-white" />
+                </Link>
+              }
+
               <Link
-                href={siteConfig.authors[0].bluesky || "/"}
-                prefetch={false}
-                target="_blank"
-                title="Follow me on Bluesky"
-                rel="noopener noreferrer nofollow"
-                aria-label="Bluesky"
-              >
-                <FaBluesky className="h-5 w-5 text-black dark:text-white" />
-              </Link>
-              <Link
-                href="https://github.com/weijunext/ogimage-click"
+                href="https://github.com/softkern/ogimage.top"
                 prefetch={false}
                 title="ogimage-click"
                 target="_blank"
                 rel="noopener noreferrer nofollow"
                 aria-label="GitHub"
               >
-                <GithubIcon className="h-5 w-5 text-black dark:text-white" />
+                <FaGithub className="h-5 w-5 text-black dark:text-white" />
               </Link>
               <ModeToggle />
             </div>

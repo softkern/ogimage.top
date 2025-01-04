@@ -30,7 +30,7 @@ export const basicTemplateDefault: BasicTemplate = {
   name: "x:header-basic",
   params: {
     title: {
-      text: "Hi, I'm Jude 👋",
+      text: "Hi, I'm Softkern 👋",
       fontFamily: "inter",
       fontWeight: 600,
       fontSize: 48,

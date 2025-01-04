@@ -1,0 +1,11 @@
+name = "ogimage-top"
+compatibility_date = "2024-07-29"
+compatibility_flags = ["nodejs_compat"]
+pages_build_output_dir = ".vercel/output/static"
+
+[vars]
+NEXT_PUBLIC_BASE_URL=https://ogimage.top
+NEXT_PUBLIC_API_URL=https://ogimage.top/api
+
+NEXT_PUBLIC_GOOGLE_ID=G-9FWBRNK57D
+NEXT_PUBLIC_GOOGLE_ADSENSE_ID=
