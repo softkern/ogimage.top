@@ -49,8 +49,8 @@ export default function Hero() {
         </div>
 
         <div className="mt-10 space-x-4 text-4xl">
-          <Link href="#start" className={buttonVariants()}>Get Started</Link>
-          <Link href="#features" className={buttonVariants({ variant: "secondary" })}>Features</Link>
+          <Link href="#get-started" title="Link to get started section" className={buttonVariants()}>Get Started</Link>
+          <Link href="#features" title="Link to features section" className={buttonVariants({ variant: "secondary" })}>Features</Link>
         </div>
       </div>
     </nav>

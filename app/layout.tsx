@@ -16,6 +16,9 @@ import { siteConfig } from "@/config/site"
 
 export const metadata: Metadata = {
   ...siteConfig,
+  alternates: {
+    canonical: "/",
+  },
 }
 
 export default async function RootLayout({

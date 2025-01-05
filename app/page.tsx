@@ -27,7 +27,7 @@ export default function Home() {
         <Hero />
       </div>
 
-      <div id="start" className="mb-4"></div>
+      <div id="get-started" className="mb-4"></div>
       <div className="space-y-4">
         <TemplateSelector />
 
