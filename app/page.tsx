@@ -23,7 +23,7 @@ import TemplateSelector from "@/components/template-selector"
 export default function Home() {
   return (
     <div>
-      <div className="flex min-h-[calc(100vh)] flex-col items-center justify-center px-4">
+      <div className="flex min-h-[calc(100vh-120px)] flex-col items-center justify-center px-4">
         <Hero />
       </div>
 

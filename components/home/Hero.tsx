@@ -7,7 +7,7 @@ import Link from "next/link"
 
 export default function Hero() {
   return (
-    <nav className="mx-auto mt-20 flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
+    <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-3xl text-center">
         <h1 className="relative mb-2 text-2xl font-medium sm:text-3xl">
           <span className="inline-flex items-center">
