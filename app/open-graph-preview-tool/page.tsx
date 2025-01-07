@@ -27,7 +27,7 @@ export default function OGPreviewPage() {
   return (
     <div className="container mx-auto p-4 space-y-4">
       <h1 className="text-2xl font-bold">Open Graph Preview</h1>
-      <p className="text-muted-foreground">Enter URL to preview how your website's Open Graph will be presented on social media platforms..</p>
+      <p className="text-muted-foreground">Enter URL to preview how your website&apos;s Open Graph will be presented on social media platforms..</p>
       <OGPreviewForm />
       <OGDataDisplay />
     </div>
