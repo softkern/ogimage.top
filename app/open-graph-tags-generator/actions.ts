@@ -2,7 +2,6 @@
 
 import { useOGStore } from "@/stores/opengraph-store"
 
-
 export async function updateOGData(prevState: any, formData: FormData) {
   const data = {
     type: formData.get('type'),

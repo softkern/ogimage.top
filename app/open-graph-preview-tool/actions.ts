@@ -12,6 +12,7 @@ interface OGData {
 
 let cachedOGData: OGData | null = null
 
+export const runtime = 'edge'
 export async function fetchOGData(url: string): Promise<void> {
   try {
     const response = await fetch(url)

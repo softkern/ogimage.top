@@ -10,6 +10,7 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger
 } from "@/components/ui/navigation-menu";
+import Image from "next/image";
 
 const components: { title: string; href: string; description: string }[] = [
   {
@@ -43,7 +44,13 @@ export default function Header() {
             prefetch={false}
             className="flex items-center space-x-2"
           >
-            <img src="/logo.svg" alt="Logo" className="h-8 w-8" />
+            <Image
+              src="/logo.svg"
+              alt="Logo"
+              width={32}
+              height={32}
+              className="block"
+            />
             <span className="hidden text-lg tracking-tighter font-bold md:block">
               Free Open Graph Toolset
             </span>

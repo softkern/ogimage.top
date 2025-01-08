@@ -50,7 +50,7 @@ export default function Footer() {
               <Link
                 href="https://github.com/softkern/ogimage.top"
                 prefetch={false}
-                title="ogimage-click"
+                title="ogimage-top"
                 target="_blank"
                 rel="noopener noreferrer nofollow"
                 aria-label="GitHub"
