@@ -23,7 +23,7 @@ export default function OGPreviewForm() {
     <form onSubmit={handleSubmit} className="flex gap-2">
       <Input
         type="url"
-        placeholder="Enter URL to preview"
+        placeholder="Enter URL to preview, like https://www.example.com"
         value={url}
         onChange={(e) => setUrl(e.target.value)}
         required

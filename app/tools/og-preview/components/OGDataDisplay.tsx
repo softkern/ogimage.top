@@ -1,4 +1,4 @@
-import { getOGData } from "@/app/open-graph-preview-tool/actions"
+import { getOGData } from "@/app/tools/og-preview/actions"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import Image from 'next/image'
 

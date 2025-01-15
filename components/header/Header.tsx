@@ -21,13 +21,13 @@ const components: { title: string; href: string; description: string }[] = [
   },
   {
     title: "Open Graph Tags Generator",
-    href: "/open-graph-tags-generator",
+    href: "/tools/og-tags",
     description:
       "Generate Open Graph meta tags for your website.",
   },
   {
     title: "Open Graph Preview",
-    href: "/open-graph-preview-tool",
+    href: "/tools/og-preview",
     description:
       "Preview how your website's Open Graph will be presented on social media platforms.",
   },

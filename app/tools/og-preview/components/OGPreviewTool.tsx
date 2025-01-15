@@ -62,7 +62,7 @@ export default function OGPreviewTool() {
       <form onSubmit={handleSubmit} className="flex space-x-2">
         <Input
           type="url"
-          placeholder="Enter URL to preview"
+          placeholder="Enter URL to preview, like https://www.example.com"
           value={url}
           onChange={(e) => setUrl(e.target.value)}
           required
@@ -95,7 +95,7 @@ export default function OGPreviewTool() {
                   />
                 </div>
               )}
-              <h3 className="text-xl font-semibold mb-2">{title}</h3>
+              <div className="text-xl font-semibold mb-2">{title}</div>
               <p className="text-muted-foreground mb-2">{description}</p>
               <p className="text-sm text-muted-foreground">{ogUrl}</p>
             </CardContent>

@@ -1,4 +1,4 @@
-import OGPreviewTool from '@/app/open-graph-preview-tool/components/OGPreviewTool'
+import OGPreviewTool from '@/app/tools/og-preview/components/OGPreviewTool'
 import { BASE_URL, siteConfig } from '@/config/site'
 import { Metadata } from 'next'
 
@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   keywords: ["Open Graph Preview", "Open Graph Debug"],
   openGraph: {
     title: "Open Graph Preview",
-    url: "/open-graph-tags-generator",
+    url: "/tools/og-preview",
     description: "Preview how your website's Open Graph will be presented on social media platforms.",
     images: [`${BASE_URL}/preview-og.webp`]
   },
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     images: [`${BASE_URL}/preview-og.webp`]
   },
   alternates: {
-    canonical: "/open-graph-tags-generator",
+    canonical: "/tools/og-preview",
   },
 }
 

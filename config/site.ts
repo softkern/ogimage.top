@@ -7,13 +7,13 @@ export const TWITTER_URL = "https://x.com/intent/follow?screen_name=softkern";
 
 
 const baseSiteConfig = {
-  name: "Free OG Image Generator",
-  title: "Free OG Image Generator for Social Media Visuals",
+  name: "Free Open Graph Tools",
+  title: "Free Open Graph Tools - Generate, Preview and Debug OG Tags",
   description:
-    "Create stunning Open Graph images effortlessly with our free generator. Customize templates, save in multiple formats, and boost your social media presence.",
+    "All-in-one Open Graph toolkit for developers. Create OG images, generate meta tags, and preview social media cards.",
   url: BASE_URL,
   metadataBase: new URL(BASE_URL),
-  keywords: ['OG Image Generator', 'Open Graph', 'customizable templates', 'user-friendly interface', 'cross-platform'],
+  keywords: ['open graph generator', 'og image creator', 'social media preview', 'meta tags generator', 'og debug tool'],
   authors: [
     {
       name: SITE_OWNER,

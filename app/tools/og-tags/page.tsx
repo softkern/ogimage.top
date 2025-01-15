@@ -1,6 +1,6 @@
-import MetaTagsOutput from '@/app/open-graph-tags-generator/components/MetaTagsOutput'
-import OGPreview from '@/app/open-graph-tags-generator/components/OGPreview'
-import OGForm from '@/app/open-graph-tags-generator/components/OGTagForm'
+import MetaTagsOutput from '@/app/tools/og-tags/components/MetaTagsOutput'
+import OGPreview from '@/app/tools/og-tags/components/OGPreview'
+import OGForm from '@/app/tools/og-tags/components/OGTagForm'
 import { Card } from "@/components/ui/card"
 import { BASE_URL, siteConfig } from '@/config/site'
 import { Metadata } from 'next'
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   keywords: ["Open Graph Tags Generator"],
   openGraph: {
     title: "Open Graph Tags Generator",
-    url: "/open-graph-tags-generator",
+    url: "/tools/og-tags",
     description: "Generate Open Graph meta tags for your website.",
     images: [`${BASE_URL}/tag-og.webp`]
   },
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     images: [`${BASE_URL}/tag-og.webp`]
   },
   alternates: {
-    canonical: "/open-graph-tags-generator",
+    canonical: "/tools/og-tags",
   },
 }
 
