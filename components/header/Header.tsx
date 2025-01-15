@@ -10,28 +10,9 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger
 } from "@/components/ui/navigation-menu";
+import { toolsConfig } from "@/config/nav";
 import Image from "next/image";
 
-const components: { title: string; href: string; description: string }[] = [
-  {
-    title: "Open Graph Image Generator",
-    href: "/#get-started",
-    description:
-      "Generate Open Graph image for your website",
-  },
-  {
-    title: "Open Graph Tags Generator",
-    href: "/tools/og-tags",
-    description:
-      "Generate Open Graph meta tags for your website.",
-  },
-  {
-    title: "Open Graph Preview",
-    href: "/tools/og-preview",
-    description:
-      "Preview how your website's Open Graph will be presented on social media platforms.",
-  },
-]
 
 export default function Header() {
   return (
@@ -63,7 +44,7 @@ export default function Header() {
                 <NavigationMenuTrigger>Tools</NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
-                    {components.map((component) => (
+                    {toolsConfig.map((component) => (
                       <ListItem
                         key={component.title}
                         title={component.title}

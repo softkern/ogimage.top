@@ -1,7 +1,7 @@
 import { SiteConfig } from "@/types/siteConfig";
 
 export const SITE_OWNER = "softkern";
-export const BASE_URL = "https://ogimage.top";
+export const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000'
 export const TWITTER_URL = "https://x.com/intent/follow?screen_name=softkern";
 // export const BLUESKY_URL = "https://bsky.app/profile/softkern.bsky.social";
 

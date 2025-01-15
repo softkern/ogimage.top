@@ -12,11 +12,11 @@ export default function Footer() {
           <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
             <Link
               href={siteConfig.url}
-              title="Free OG Image Generator"
+              title="Free Open Graph Tools"
               prefetch={false}
               className="font-mono font-semibold hover:underline"
             >
-              Free OG Image Generator
+              Free Open Graph Tools
             </Link>
           </div>
 
