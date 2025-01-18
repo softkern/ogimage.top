@@ -6,6 +6,7 @@ import { NextResponse } from 'next/server'
 const MAX_RETRIES = 3
 const RETRY_DELAY = 1000 // 1秒
 
+export const runtime = 'edge';
 async function fetchWithRetry(url: string, retries = MAX_RETRIES): Promise<Response> {
   try {
     const response = await fetch(url)

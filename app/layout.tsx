@@ -7,7 +7,6 @@ import type { Metadata } from "next"
 
 import GoogleAdsense from "@/app/GoogleAdsense"
 import GoogleAnalytics from "@/app/GoogleAnalytics"
-import Umami from "@/app/Umami"
 import Footer from "@/components/footer/Footer"
 import Header from "@/components/header/Header"
 import { ThemeProvider } from "@/components/theme-provider"
@@ -55,7 +54,6 @@ export default async function RootLayout({
           <>
             <GoogleAnalytics />
             <GoogleAdsense />
-            <Umami />
           </>
         ) : (
           <></>
