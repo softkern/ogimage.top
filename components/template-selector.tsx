@@ -1,9 +1,9 @@
 "use client"
 
-import { useState, type JSX } from "react"
 import { useTemplateStore } from "@/providers/template-store-provider"
+import { useState, type JSX } from "react"
 
-import type { Template } from "@/lib/templates"
+import { skeletons } from "@/components/template-skeletons"
 import { Button } from "@/components/ui/button"
 import {
   Carousel,
@@ -20,7 +20,7 @@ import {
 } from "@/components/ui/dropdown-menu"
 import { Label } from "@/components/ui/label"
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
-import { skeletons } from "@/components/template-skeletons"
+import type { Template } from "@/lib/templates"
 
 import {
   BlogLogo,
@@ -235,7 +235,7 @@ export default function TemplateSelector() {
   }
 
   return (
-    <section className="space-y-4">
+    <section className="space-y-4" id="templates">
       <div className="space-y-2">
         <h2 className="sr-only text-sm font-medium">Choose a template</h2>
         <div className="flex gap-2">

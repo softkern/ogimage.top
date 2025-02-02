@@ -1,24 +1,17 @@
-import { InfoCircledIcon } from "@radix-ui/react-icons"
+import { CopyApiRequestButton } from "@/components/copy-api-request-button";
+import { BackgroundForm } from "@/components/forms/background";
+import { FeatureSection } from "@/components/home/FeatureSection";
+import Hero from "@/components/home/Hero";
+import PreviewRenderer from "@/components/preview-renderer";
+import SaveImageButton from "@/components/save-image-button";
+import TemplateForm from "@/components/template-form";
+import TemplateSelector from "@/components/template-selector";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Separator } from "@/components/ui/separator";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { InfoCircledIcon } from "@radix-ui/react-icons";
 
-import { CopyApiRequestButton } from "@/components/copy-api-request-button"
-import { BackgroundForm } from "@/components/forms/background"
-import HowToAddSection from "@/components/home/HowToAddSection"
-import PreviewRenderer from "@/components/preview-renderer"
-import SaveImageButton from "@/components/save-image-button"
-import TemplateForm from "@/components/template-form"
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card"
-import { Separator } from "@/components/ui/separator"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 
-import { FeatureSection } from "@/components/home/FeatureSection"
-import Hero from "@/components/home/Hero"
-import TemplateSelector from "@/components/template-selector"
 
 export default function Home() {
   return (
@@ -28,6 +21,19 @@ export default function Home() {
       </div>
 
       <div id="get-started" className="mb-4"></div>
+
+      {/* Top Advertisement */}
+      <div className="ad-container my-4 text-center min-h-[90px]">
+        <ins
+          className="adsbygoogle"
+          style={{ display: "block" }}
+          data-ad-client={`ca-pub-${process.env.NEXT_PUBLIC_GOOGLE_ADSENSE_ID}`}
+          data-ad-slot="XXXXX"
+          data-ad-format="auto"
+          data-full-width-responsive="true"
+        />
+      </div>
+
       <div className="space-y-4">
         <TemplateSelector />
 
@@ -38,6 +44,17 @@ export default function Home() {
             <TemplateForm />
 
             <BackgroundForm />
+
+            {/* Sidebar Advertisement */}
+            {/* <div className="ad-container my-4 text-center min-h-[250px]">
+              <ins
+                className="adsbygoogle"
+                style={{ display: "block" }}
+                data-ad-client={`ca-pub-${process.env.NEXT_PUBLIC_GOOGLE_ADSENSE_ID}`}
+                data-ad-slot="XXXXX"
+                data-ad-format="rectangle"
+              />
+            </div> */}
           </div>
 
           <div className="order-first lg:order-last lg:col-span-2">
@@ -47,6 +64,18 @@ export default function Home() {
                   <PreviewRenderer />
                 </div>
               </Card>
+
+              {/* Bottom Advertisement */}
+              {/* <div className="ad-container my-4 text-center min-h-[90px]">
+                <ins
+                  className="adsbygoogle"
+                  style={{ display: "block" }}
+                  data-ad-client={`ca-pub-${process.env.NEXT_PUBLIC_GOOGLE_ADSENSE_ID}`}
+                  data-ad-slot="XXXXX"
+                  data-ad-format="auto"
+                  data-full-width-responsive="true"
+                />
+              </div> */}
 
               <Tabs defaultValue="save">
                 <TabsList className="grid grid-cols-3">
@@ -128,7 +157,7 @@ export default function Home() {
 
         <FeatureSection />
 
-        <HowToAddSection />
+        {/* <HowToAddSection /> */}
       </div>
     </div>
   )

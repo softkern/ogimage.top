@@ -26,10 +26,39 @@ export const toolsConfig: { title: string; href: string; description: string }[]
 
 export type ToolsConfig = typeof toolsConfig
 
+export const guidesConfig = [
+  {
+    title: "Getting Started",
+    href: "/guides/getting-started",
+    description: "Learn the basics of OG Image Generator in just 5 minutes",
+  },
+  {
+    title: "Using Templates",
+    href: "/guides/templates",
+    description: "Learn how to choose and customize templates for professional preview images",
+  },
+  {
+    title: "Image Optimization",
+    href: "/guides/optimization",
+    description: "Optimize your images for the best social media presentation",
+  },
+  {
+    title: "Best Practices",
+    href: "/guides/best-practices",
+    description: "Professional tips and advice for creating more engaging preview images",
+  },
+] as const
+
+export type GuidesConfig = typeof guidesConfig
+
 export const mainNavConfig = [
   {
     title: "Tools",
     href: "/tools",
+  },
+  {
+    title: "Guides",
+    href: "/guides",
   },
   {
     title: "Blog",

@@ -1,3 +1,6 @@
+"use client";
+
+import Image from "next/image";
 import Link from "next/link";
 import * as React from "react";
 
@@ -8,17 +11,17 @@ import {
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
-  NavigationMenuTrigger
+  NavigationMenuTrigger,
+  navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
-import { toolsConfig } from "@/config/nav";
-import Image from "next/image";
-
+import { guidesConfig, toolsConfig } from "@/config/nav";
+import { cn } from "@/lib/utils";
 
 export default function Header() {
   return (
-    <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 pt-4 pb-4 sm:px-6 lg:px-8">
-      <div className="flex items-center space-x-4">
-        <div>
+    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+      <nav className="container flex h-14 items-center justify-between">
+        <div className="flex items-center space-x-6">
           <Link
             href="/"
             title="Free OG Image Generator"
@@ -32,18 +35,17 @@ export default function Header() {
               height={32}
               className="block"
             />
-            <span className="hidden text-lg tracking-tighter font-bold md:block">
+            <span className="hidden font-bold sm:inline-block">
               Free Open Graph Toolset
             </span>
           </Link>
-        </div>
-        <div>
+
           <NavigationMenu>
             <NavigationMenuList>
               <NavigationMenuItem>
                 <NavigationMenuTrigger>Tools</NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
+                  <ul className="grid gap-3 p-4 w-screen max-w-[600px] sm:w-[400px] md:w-[500px] lg:w-[600px] sm:grid-cols-1 md:grid-cols-2">
                     {toolsConfig.map((component) => (
                       <ListItem
                         key={component.title}
@@ -56,15 +58,31 @@ export default function Header() {
                   </ul>
                 </NavigationMenuContent>
               </NavigationMenuItem>
+
+              <NavigationMenuItem>
+                <NavigationMenuTrigger>Guides</NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <ul className="grid gap-3 p-4 w-screen max-w-[600px] sm:w-[400px] md:w-[500px] lg:w-[600px] sm:grid-cols-1 md:grid-cols-2">
+                    {guidesConfig.map((guide) => (
+                      <ListItem
+                        key={guide.title}
+                        title={guide.title}
+                        href={guide.href}
+                      >
+                        {guide.description}
+                      </ListItem>
+                    ))}
+                  </ul>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
             </NavigationMenuList>
           </NavigationMenu>
         </div>
-      </div>
-      <div className="flex items-center gap-x-4">
+
         <ModeToggle />
-      </div>
-    </nav>
-  )
+      </nav>
+    </header>
+  );
 }
 
 const ListItem = React.forwardRef<
@@ -76,7 +94,10 @@ const ListItem = React.forwardRef<
       <NavigationMenuLink asChild>
         <a
           ref={ref}
-          className={"block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"}
+          className={cn(
+            "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
+            className
+          )}
           {...props}
         >
           <div className="text-sm font-medium leading-none">{title}</div>
@@ -86,6 +107,6 @@ const ListItem = React.forwardRef<
         </a>
       </NavigationMenuLink>
     </li>
-  )
-})
-ListItem.displayName = "ListItem"
+  );
+});
+ListItem.displayName = "ListItem";
