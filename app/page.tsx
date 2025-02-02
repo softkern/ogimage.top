@@ -23,7 +23,7 @@ export default function Home() {
       <div id="get-started" className="mb-4"></div>
 
       {/* Top Advertisement */}
-      <div className="ad-container my-4 text-center min-h-[90px]">
+      {/* <div className="ad-container my-4 text-center min-h-[90px]">
         <ins
           className="adsbygoogle"
           style={{ display: "block" }}
@@ -32,7 +32,7 @@ export default function Home() {
           data-ad-format="auto"
           data-full-width-responsive="true"
         />
-      </div>
+      </div> */}
 
       <div className="space-y-4">
         <TemplateSelector />
